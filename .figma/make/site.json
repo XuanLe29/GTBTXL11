@@ -1,0 +1,10 @@
+{
+  "description": "Showcase your work and skills with a customizable portfolio platform designed for creatives and professionals to attract clients and opportunities.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
