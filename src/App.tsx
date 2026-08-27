@@ -41,14 +41,14 @@ const PROJECTS = [
     category: "OO Analysis & Design",
     year: "2026",
     period: "Feb – Apr 2026",
-    tags: ["Use Cases", "Class Diagram", "Sequence Diagram", "SQL Server"],
+    tags: ["OOAD", "45+ Use Cases", "SQL Server", "3-Tier Architecture", "Class Diagram", "Activity Diagram", "Sequence Diagram"],
     img: "https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=800&h=560&fit=crop&auto=format",
     bullets: [
       "Analyzed multi-branch sales and inventory workflows; defined 45+ Use Cases for ordering, payment, inventory, and CRM processes.",
       "Designed Activity, Sequence, Collaboration, and Class Diagrams alongside a 3-tier architecture and SQL Server database.",
       "Built business rules, constraints, and automated triggers for inventory synchronization and order processing.",
     ],
-    stats: [{ v: "45+", l: "Use Cases" }, { v: "4", l: "Diagrams" }, { v: "3-tier", l: "Architecture" }],
+    stats: [{ v: "45+", l: "Use Cases" }, { v: "5", l: "Diagram Types" }, { v: "3-tier", l: "Architecture" }],
   },
 ];
 
@@ -59,6 +59,20 @@ const SKILLS_BA = [
   "Business Process Modeling (BPMN, DFD)",
   "UML Modeling",
   "Business Rules Analysis",
+  "Requirements Traceability Matrix (RTM)",
+  "Stakeholder Analysis & Management",
+  "Scope Definition & Management",
+  "Risk Management & Quality Control",
+  "UI/UX Prototyping",
+];
+
+const SKILLS_DESIGN = [
+  "Object-Oriented Analysis & Design (OOAD)",
+  "3-Tier Architecture Design",
+  "Database Design & Modeling",
+  "Use Case / Activity / Sequence / Class / Collaboration Diagrams",
+  "Entity-Relationship Modeling",
+  "Automated Business Rules & Triggers",
 ];
 
 const SKILLS_QA = [
@@ -72,7 +86,8 @@ const SKILLS_QA = [
 
 const TOOLS = [
   "Enterprise Architect", "Draw.io", "Figma", "Canva",
-  "Testiny", "GitHub Issues", "MS Office", "Google Workspace",
+  "Testiny", "GitHub", "GitHub Issues", "SQL Server",
+  "MS Office", "Google Workspace",
 ];
 
 export default function App() {
@@ -142,7 +157,7 @@ export default function App() {
         {/* Info bar */}
         <div className="max-w-6xl mx-auto px-8 md:px-14 py-4 flex flex-wrap items-center justify-between gap-y-3 gap-x-6">
           <p className="text-[11px] font-medium tracking-[0.14em] text-[#888] uppercase leading-relaxed">
-            Business Analysis&nbsp;&nbsp;//&nbsp;&nbsp;Software Testing<br className="md:hidden" />
+            Business Analysis&nbsp;&nbsp;//&nbsp;&nbsp;System Design&nbsp;&nbsp;//&nbsp;&nbsp;Software Testing<br className="md:hidden" />
             <span className="hidden md:inline">&nbsp;&nbsp;/&nbsp;&nbsp;</span>Requirements &amp; QA
           </p>
           <div className="flex flex-wrap items-center gap-3">
@@ -178,7 +193,7 @@ export default function App() {
           </div>
           <div className="md:pt-4">
             <p className="text-[1.85rem] md:text-[2.4rem] font-light leading-[1.35] text-[#1f1f1f]">
-              I <span className="italic-serif text-[2.1rem] md:text-[2.8rem]">analyze</span> business requirements and ensure software{" "}
+              I <span className="italic-serif text-[2.1rem] md:text-[2.8rem]">analyze</span> requirements, design systems, and ensure software{" "}
               <span className="italic-serif text-[2.1rem] md:text-[2.8rem]">quality.</span>
             </p>
             <button
@@ -227,7 +242,7 @@ export default function App() {
 
             {/* Right — skills */}
             <div>
-              <div className="mb-10">
+              <div className="mb-8">
                 <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#aaa] mb-4">Business Analysis</p>
                 <div className="flex flex-col gap-2">
                   {SKILLS_BA.map((s) => (
@@ -238,7 +253,18 @@ export default function App() {
                   ))}
                 </div>
               </div>
-              <div className="mb-10">
+              <div className="mb-8">
+                <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#aaa] mb-4">System & Database Design</p>
+                <div className="flex flex-col gap-2">
+                  {SKILLS_DESIGN.map((s) => (
+                    <div key={s} className="flex items-center gap-3 text-sm text-[#444]">
+                      <span className="w-1 h-1 rounded-full bg-[#ccc] shrink-0" />
+                      {s}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="mb-8">
                 <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#aaa] mb-4">Software Testing</p>
                 <div className="flex flex-col gap-2">
                   {SKILLS_QA.map((s) => (
